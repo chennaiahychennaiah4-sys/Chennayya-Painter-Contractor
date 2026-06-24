@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>చెన్నయ్య పెయింటర్ - జమ్మలమడుగు</title>
+    <!-- ఐకాన్స్ కోసం (WhatsApp, Phone, Stars కోసం) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; scroll-behavior: smooth; }
+        body { background-color: #f8fafc; color: #1e293b; }
+        
+        /* Navigation */
+        header { background-color: #0f172a; color: white; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+        .logo { font-size: 1.6rem; font-weight: bold; color: #f59e0b; }
+        nav a { color: white; text-decoration: none; margin-left: 20px; font-weight: 600; transition: 0.3s; }
+        nav a:hover { color: #f59e0b; }
+        
+        /* Hero Section */
+        .hero { background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('https://images.unsplash.com/photo-1562259949-e8e7689d7828?q=80&w=1200') no-repeat center center/cover; height: 65vh; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; text-align: center; padding: 20px; }
+        .hero h1 { font-size: 3.5rem; margin-bottom: 15px; text-shadow: 0 4px 6px rgba(0,0,0,0.3); color: #f8fafc; }
+        .hero p { font-size: 1.3rem; margin-bottom: 20px; max-width: 600px; color: #cbd5e1; }
+        
+        /* Genuine Rating Badge */
+        .rating-badge { background: #16a34a; color: white; padding: 6px 18px; border-radius: 20px; font-weight: bold; font-size: 1.1rem; margin-bottom: 25px; display: flex; align-items: center; gap: 8px; box-shadow: 0 10px 15px -3px rgba(22, 163, 74, 0.3); }
+        
+        /* Buttons */
+        .cta-buttons { display: flex; gap: 15px; flex-wrap: wrap; justify-content: center; }
+        .btn { color: white; padding: 14px 30px; text-decoration: none; border: none; border-radius: 30px; font-size: 1rem; cursor: pointer; font-weight: bold; display: inline-flex; align-items: center; gap: 10px; transition: 0.3s; box-shadow: 0 4px 14px rgba(0,0,0,0.15); }
+        .btn-quote { background-color: #dc2626; }
+        .btn-quote:hover { background-color: #b91c1c; transform: translateY(-2px); }
+        .btn-call { background-color: #2563eb; }
+        .btn-call:hover { background-color: #1d4ed8; transform: translateY(-2px); }
+        
+        /* Notice Bar */
+        .notice-bar { background-color: #fef3c7; color: #92400e; padding: 15px; text-align: center; font-weight: bold; border-bottom: 3px solid #f59e0b; font-size: 1.1rem; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        
+        /* Sections General */
+        section { padding: 70px 20px; text-align: center; }
+        section h2 { font-size: 2.2rem; margin-bottom: 10px; color: #0f172a; position: relative; padding-bottom: 15px; }
+        section h2::after { content: ''; width: 50px; height: 4px; background: #dc2626; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); border-radius: 2px; }
+        .section-desc { color: #64748b; margin-bottom: 40px; font-size: 1.1rem; }
+        
+        .grid-container { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; max-width: 1200px; margin: 0 auto; }
+        
+        /* Service Cards */
+        .card { background: white; padding: 35px 25px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -1px rgba(0,0,0,0.06); width: 320px; transition: 0.3s; border-top: 5px solid #dc2626; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); }
+        .card h3 { margin-bottom: 15px; color: #0f172a; font-size: 1.4rem; }
+        .card p { color: #475569; line-height: 1.6; }
+        
+        /* Gallery Image Cards */
+        .img-card { width: 320px; background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); transition: 0.3s; }
+        .img-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); }
+        .img-container { width: 100%; height: 240px; overflow: hidden; background-color: #cbd5e1; }
+        .img-container img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
+        .img-card:hover .img-container img { transform: scale(1.08); }
+        .img-info { padding: 15px; font-weight: bold; color: #0f172a; background: white; border-top: 1px solid #f1f5f9; }
+
+        /* Reviews Section */
+        .reviews { background-color: #ffffff; }
+        .review-box { background: #f8fafc; padding: 25px; border-radius: 16px; width: 320px; text-align: left; box-shadow: inset 0 2px 4px rgba(0,0,0,0.02); border-left: 5px solid #16a34a; }
+        .client-name { font-weight: bold; margin-top: 12px; color: #0f172a; display: block; }
+        .stars { color: #f59e0b; margin-bottom: 8px; font-size: 1.1rem; }
+
+        /* Contact Form */
+        .contact { background-color: #f1f5f9; }
+        #paintForm { max-width: 450px; margin: 0 auto; background: white; padding: 40px; border-radius: 16px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05); display: flex; flex-direction: column; gap: 20px; }
+        #paintForm input, #paintForm select { padding: 14px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 1rem; outline: none; transition: 0.3s; }
+        #paintForm input:focus, #paintForm select:focus { border-color: #dc2626; box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.15); }
+        #paintForm button { background: #dc2626; border-radius: 8px; padding: 14px; border: none; color: white; font-size: 1.1rem; font-weight: bold; cursor: pointer; transition: 0.3s; box-shadow: 0 4px 6px rgba(220, 38, 38, 0.2); }
+        #paintForm button:hover { background: #b91c1c; }
+        
+        /* Floating WhatsApp & Call Buttons (Mobile Friendly) */
+        .floating-btn { position: fixed; bottom: 20px; width: 60px; height: 60px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 28px; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3); z-index: 1000; text-decoration: none; transition: 0.3s; color: white; }
+        .floating-btn:hover { transform: scale(1.1); }
+        .floating-whatsapp { right: 20px; background-color: #25d366; }
+        .floating-call { right: 90px; background-color: #2563eb; }
+
+        footer { background-color: #0f172a; color: #cbd5e1; text-align: center; padding: 30px 20px; font-size: 1rem; border-top: 1px solid #1e293b; }
+        footer p { margin-bottom: 8px; }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">🎨 చెన్నయ్య పెయింటర్</div>
+        <nav>
+            <a href="#home">హోమ్</a>
+            <a href="#services">సర్వీసెస్</a>
+            <a href="#gallery">మా పనులు</a>
+            <a href="#reviews">రివ్యూస్</a>
+            <a href="#contact">సంప్రదించండి</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <h1>చెన్నయ్య పెయింటర్</h1>
+        <p>మీ ఇంటికి రంగుల అందం! జమ్మలమడుగులో అత్యుత్తమ క్వాలిటీ మరియు నమ్మకమైన పెయింటింగ్ సర్వీస్.</p>
+        
+        <!-- జెన్యూన్ రేటింగ్ -->
+        <div class="rating-badge">
+            <span>4.9</span> <i class="fas fa-star"></i> <span>గూగుల్ జెన్యూన్ రేటింగ్ (120+ రివ్యూస్)</span>
+        </div>
+        
+        <div class="cta-buttons">
+            <a href="#contact" class="btn btn-quote"><i class="fas fa-calendar-check"></i> ఇప్పుడే బుక్ చేసుకోండి</a>
+            <a href="tel:+919550455757" class="btn btn-call"><i class="fas fa-phone-alt"></i> కాల్ చేయండి</a>
+        </div>
+    </section>
+
+    <!-- లొకేషన్ వివరాలు -->
+    <div class="notice-bar">
+        <i class="fas fa-map-marker-alt"></i> అడ్రస్: జమ్మలమడుగు | జమ్మలమడుగు చుట్టుపక్కల ఉన్న ఏ గ్రామాల్లోనైనా కాంట్రాక్ట్ తీసుకొని పనులు చేయబడును.
+    </div>
+
+    <!-- Services -->
+    <section id="services">
+        <h2>మా సర్వీసెస్</h2>
+        <p class="section-desc">మేము అందించే ప్రొఫెషనల్ పెయింటింగ్ సేవలు</p>
+        <div class="grid-container">
+            <div class="card">
+                <h3>ఇంటీరియర్ పెయింటింగ్</h3>
+                <p>ఇంటి లోపలి గోడలకు రాయల్ లుక్ వచ్చేలా లేటెస్ట్ కలర్స్ మరియు ఫినిషింగ్ చేయబడును.</p>
+            </div>
+            <div class="card">
+                <h3>ఎక్స్‌టీరియర్ పెయింటింగ్</h3>
+                <p>ఎండకు, వానకు రంగులు వెలిసిపోకుండా ఎక్కువ కాలం మన్నే బెస్ట్ క్వాలిటీ పెయింటింగ్.</p>
+            </div>
+            <div class="card">
+                <h3>వాల్ టెక్స్చర్స్ & డిజైన్స్</h3>
+                <p>హాల్ మరియు బెడ్‌రూమ్ గోడలపై ఆధునిక డిజైన్లు, రాయల్ టెక్స్చర్ వర్క్స్ చేసివ్వబడును.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery (ఫొటోలు ఇక్కడ మారతాయి) -->
+    <section id="gallery" class="gallery">
+        <h2>మా పెయింటింగ్ పనులు</h2>
+        <p class="section-desc">మేము జమ్మలమడుగు పరిసర ప్రాంతాల్లో పూర్తి చేసిన కొన్ని ఇండ్ల ఫొటోలు:</p>
+        <div class="grid-container">
+            <div class="img-card">
+                <div class="img-container">
+                    <!-- మీ ఫోటో లింక్ ఇక్కడ పెట్టండి -->
+                    <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=400" alt="Work 1">
+                </div>
+                <div class="img-info">ఇంటీరియర్ లగ్జరీ ఫినిషింగ్</div>
+            </div>
+            <div class="img-card">
+                <div class="img-container">
+                    <!-- మీ ఫోటో లింక్ ఇక్కడ పెట్టండి -->
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=400" alt="Work 2">
+                </div>
+                <div class="img-info">మోడరన్ హౌస్ ఎక్స్‌టీరియర్</div>
+            </div>
+            <div class="img-card">
+                <div class="img-container">
+                    <!-- మీ ఫోటో లింక్ ఇక్కడ పెట్టండి -->
+                    <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=400" alt="Work 3">
+                </div>
+                <div class="img-info">రాయల్ వాల్ టెక్స్చర్ డిజైన్</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- జెన్యూన్ కస్టమర్ రివ్యూస్ -->
+    <section id="reviews" class="reviews">
+        <h2>కస్టమర్ల అభిప్రాయాలు (Reviews)</h2>
+        <p class="section-desc">మా పనితనంపై కస్టమర్లు ఇచ్చిన జెన్యూన్ రేటింగ్స్</p>
+        <div class="grid-container">
+            <div class="review-box">
+                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p>"చెన్నయ్య గారు మా ఇంటికి చాలా అద్భుతంగా పెయింటింగ్ వేశారు. రంగుల ఎంపికలో మంచి సలహాలు ఇచ్చారు. రేటు కూడా చాలా రీజనబుల్."</p>
+                <span class="client-name">- రామాంజనేయులు (జమ్మలమడుగు)</span>
+            </div>
+            <div class="review-box">
+                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p>"పని చాలా నీట్‌గా ఉంది, ఎక్కడా రంగులు కింద పడకుండా జాగ్రత్తగా చేశారు. అనుకున్న టైమ్‌కి వర్క్ పూర్తి చేసి ఇచ్చారు. చాలా థాంక్స్."</p>
+                <span class="client-name">- సురేష్ కుమార్ (విలేజ్ కాంట్రాక్ట్)</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact" class="contact">
+        <h2>మమ్మల్ని సంప్రదించండి</h2>
+        <p class="section-desc">ఉచిత కొటేషన్ లేదా మాట్లాడటానికి కింద ఫారమ్ నింపండి</p>
+        <form id="paintForm">
+            <input type="text" placeholder="మీ పేరు" required>
+            <input type="tel" placeholder="మీ ఫోన్ నెంబర్" required>
+            <select required>
+                <option value="">సర్వీస్ ఎంచుకోండి</option>
+                <option value="interior">ఇంటి లోపల (Interior)</option>
+                <option value="exterior">ఇంటి బయట (Exterior)</option>
+                <option value="texture">డిజైన్ వర్క్ (Texture)</option>
+            </select>
+            <button type="submit">వివరాలు సబ్మిట్ చేయండి</button>
+        </form>
+    </section>
+
+    <!-- Floating Buttons (కుడివైపు కింద ఉండే ఐకాన్లు) -->
+    <!-- Call సింబల్ -->
+    <a href="tel:+919550455757" class="floating-btn floating-call" title="కాల్ చేయండి">
+        <i class="fas fa-phone-alt"></i>
+    </a>
+    <!-- WhatsApp సింబల్ -->
+    <a href="https://wa.me/919550455757?text=Hello%20Chennaiah%20గారు,%20నాకు%20పెయింటింగ్%20వర్క్%20గురించి%20వివరాలు%20కావాలి." class="floating-btn floating-whatsapp" target="_blank" title="వాట్సాప్ చేయండి">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 చెన్నయ్య పెయింటింగ్ సర్వీసెస్. ఆల్ రైట్స్ రిజర్వ్డ్.</p>
+        <p><i class="fas fa-map-marker-alt"></i> లొకేషన్: జమ్మలమడుగు | <i class="fas fa-phone-alt"></i> ఫోన్: +91 9550455757</p>
+    </footer>
+
+    <script>
+        document.getElementById('paintForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('ధన్యవాదాలు! మీ వివరాలు చెన్నయ్య గారికి అందాయి. త్వరలోనే మిమ్మల్ని సంప్రదిస్తారు.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
