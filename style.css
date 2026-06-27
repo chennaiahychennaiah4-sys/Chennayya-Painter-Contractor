@@ -1,0 +1,517 @@
+/* ===========================
+   CHENNAIAH PAINTER
+   STYLE.CSS - PART 1
+=========================== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+background:#f5f7fa;
+color:#222;
+line-height:1.6;
+overflow-x:hidden;
+}
+
+a{
+text-decoration:none;
+}
+
+img{
+max-width:100%;
+display:block;
+}
+
+/* HEADER */
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:#ffffff;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 8%;
+box-shadow:0 5px 20px rgba(0,0,0,.1);
+z-index:999;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.logo img{
+width:60px;
+height:60px;
+border-radius:50%;
+}
+
+.logo h2{
+color:#d62828;
+font-size:24px;
+}
+
+.logo p{
+font-size:13px;
+color:#666;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:25px;
+}
+
+nav ul li a{
+color:#222;
+font-weight:600;
+transition:.3s;
+}
+
+nav ul li a:hover{
+color:#d62828;
+}
+
+/* HERO */
+
+.hero{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:120px 20px;
+background:
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+url("images/work3.jpg");
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+color:#fff;
+}
+
+.hero-content{
+max-width:800px;
+}
+
+.hero h1{
+font-size:55px;
+margin-bottom:20px;
+font-weight:bold;
+}
+
+.hero p{
+font-size:20px;
+margin-bottom:25px;
+}
+
+.rating{
+display:inline-block;
+background:#ffc107;
+color:#000;
+padding:10px 18px;
+border-radius:50px;
+font-weight:bold;
+margin-bottom:30px;
+}
+
+.hero-buttons{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.call-btn,
+.whatsapp-btn{
+padding:15px 35px;
+border-radius:50px;
+font-size:18px;
+font-weight:bold;
+transition:.3s;
+}
+
+.call-btn{
+background:#d62828;
+color:#fff;
+}
+
+.call-btn:hover{
+background:#b71c1c;
+transform:translateY(-4px);
+}
+
+.whatsapp-btn{
+background:#25d366;
+color:#fff;
+}
+
+.whatsapp-btn:hover{
+transform:translateY(-4px);
+}
+
+/* COMMON */
+
+section{
+padding:90px 8%;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:60px;
+}
+
+.section-title h2{
+font-size:40px;
+color:#d62828;
+margin-bottom:10px;
+}
+
+.section-title p{
+color:#666;
+font-size:18px;
+}
+
+/* ABOUT */
+
+.container{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+align-items:center;
+}
+
+.about-image img{
+border-radius:20px;
+box-shadow:0 15px 40px rgba(0,0,0,.2);
+}
+
+.about-text h2{
+font-size:38px;
+color:#d62828;
+margin-bottom:20px;
+}
+
+.about-text p{
+font-size:18px;
+margin-bottom:20px;
+}
+
+.about-text ul{
+list-style:none;
+}
+
+.about-text ul li{
+padding:10px 0;
+font-size:18px;
+}/* ===========================
+   SERVICES
+=========================== */
+
+.service-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.service-card{
+background:#fff;
+padding:35px;
+border-radius:15px;
+text-align:center;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+transition:.4s;
+}
+
+.service-card:hover{
+transform:translateY(-10px);
+}
+
+.service-card i{
+font-size:55px;
+color:#d62828;
+margin-bottom:20px;
+}
+
+.service-card h3{
+margin-bottom:15px;
+font-size:24px;
+}
+
+.service-card p{
+color:#666;
+line-height:1.7;
+}
+
+/* ===========================
+   EXPERIENCE
+=========================== */
+
+.experience{
+background:#d62828;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:30px;
+text-align:center;
+color:#fff;
+}
+
+.exp-box h2{
+font-size:50px;
+margin-bottom:10px;
+}
+
+.exp-box p{
+font-size:20px;
+}
+
+/* ===========================
+   GALLERY
+=========================== */
+
+.gallery-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+.gallery-item{
+overflow:hidden;
+border-radius:15px;
+position:relative;
+box-shadow:0 10px 20px rgba(0,0,0,.15);
+}
+
+.gallery-item img{
+width:100%;
+height:320px;
+object-fit:cover;
+transition:.5s;
+}
+
+.gallery-item:hover img{
+transform:scale(1.1);
+}
+
+.overlay{
+position:absolute;
+bottom:0;
+left:0;
+width:100%;
+padding:20px;
+background:rgba(0,0,0,.6);
+color:#fff;
+text-align:center;
+}
+
+/* ===========================
+   BEFORE AFTER
+=========================== */
+
+.before-after-box{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+}
+
+.before,
+.after{
+background:#fff;
+padding:20px;
+border-radius:15px;
+box-shadow:0 10px 20px rgba(0,0,0,.1);
+text-align:center;
+}
+
+.before img,
+.after img{
+height:350px;
+width:100%;
+object-fit:cover;
+border-radius:10px;
+}
+
+.before h3,
+.after h3{
+margin-top:15px;
+font-size:24px;
+color:#d62828;
+}
+
+/* ===========================
+   REVIEWS
+=========================== */
+
+.review-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+}
+
+.review-card{
+background:#fff;
+padding:30px;
+border-radius:15px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.review-card:hover{
+transform:translateY(-8px);
+}
+
+.review-card p{
+margin:20px 0;
+color:#555;
+line-height:1.8;
+}
+
+.review-card h4{
+color:#d62828;
+}
+/* ===========================
+   CONTACT FORM
+=========================== */
+
+.contact form{
+max-width:600px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+.contact input,
+.contact select,
+.contact textarea{
+padding:15px;
+border:2px solid #ddd;
+border-radius:10px;
+font-size:16px;
+outline:none;
+transition:.3s;
+}
+
+.contact input:focus,
+.contact select:focus,
+.contact textarea:focus{
+border-color:#d62828;
+}
+
+.contact button{
+padding:15px;
+border:none;
+background:#d62828;
+color:#fff;
+font-size:18px;
+border-radius:10px;
+cursor:pointer;
+transition:.3s;
+}
+
+.contact button:hover{
+background:#b71c1c;
+}
+
+/* ===========================
+   MAP
+=========================== */
+
+.map iframe{
+border-radius:15px;
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+/* ===========================
+   FLOATING BUTTONS
+=========================== */
+
+.call-float,
+.whatsapp-float{
+position:fixed;
+bottom:25px;
+width:60px;
+height:60px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+color:#fff;
+font-size:26px;
+box-shadow:0 10px 20px rgba(0,0,0,.3);
+z-index:999;
+transition:.3s;
+}
+
+.call-float{
+right:100px;
+background:#d62828;
+}
+
+.whatsapp-float{
+right:25px;
+background:#25d366;
+}
+
+.call-float:hover,
+.whatsapp-float:hover{
+transform:scale(1.1);
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+background:#111;
+color:#fff;
+text-align:center;
+padding:40px 20px;
+margin-top:50px;
+}
+
+footer h2{
+color:#d62828;
+margin-bottom:10px;
+}
+
+/* ===========================
+   RESPONSIVE DESIGN
+=========================== */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:32px;
+}
+
+.hero p{
+font-size:16px;
+}
+
+.container{
+grid-template-columns:1fr;
+}
+
+.before-after-box{
+grid-template-columns:1fr;
+}
+
+nav ul{
+display:none;
+}
+
+.section-title h2{
+font-size:28px;
+}
+
+}
