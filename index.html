@@ -50,7 +50,7 @@
         /* Gallery Image Cards */
         .img-card { width: 320px; background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); transition: 0.3s; }
         .img-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); }
-        .img-container { width: 100%; height: 340px; overflow: hidden; background-color: #cbd5e1; }
+        .img-container { width: 100%; height: 340px; overflow: hidden; background-color: #cbd5e1; position: relative; }
         .img-container img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
         .img-card:hover .img-container img { transform: scale(1.08); }
         .img-info { padding: 15px; font-weight: bold; color: #0f172a; background: white; border-top: 1px solid #f1f5f9; }
@@ -61,12 +61,19 @@
         .client-name { font-weight: bold; margin-top: 12px; color: #0f172a; display: block; }
         .stars { color: #f59e0b; margin-bottom: 8px; font-size: 1.1rem; }
 
-        /* Contact & Admin Forms */
+        /* Forms Styling */
         .contact, .admin-section { background-color: #f1f5f9; }
         .admin-section { background-color: #e2e8f0; border-top: 2px dashed #cbd5e1; }
         .custom-form { max-width: 450px; margin: 0 auto; background: white; padding: 40px; border-radius: 16px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05); display: flex; flex-direction: column; gap: 20px; }
-        .custom-form input, .custom-form select { padding: 14px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 1rem; outline: none; transition: 0.3s; }
+        .custom-form input, .custom-form select { padding: 14px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 1rem; outline: none; transition: 0.3s; width: 100%; }
         .custom-form input:focus, .custom-form select:focus { border-color: #dc2626; box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.15); }
+        
+        /* File Input Hide and Style */
+        .file-upload-wrapper { position: relative; width: 100%; text-align: center; }
+        .file-upload-btn { background: #f1f5f9; border: 2px dashed #cbd5e1; padding: 20px; border-radius: 8px; display: block; cursor: pointer; color: #475569; font-weight: 600; transition: 0.3s; }
+        .file-upload-btn:hover { background: #e2e8f0; border-color: #94a3b8; }
+        .file-upload-wrapper input[type="file"] { position: absolute; left: 0; top: 0; opacity: 0; width: 100%; height: 100%; cursor: pointer; }
+
         .custom-form button { background: #dc2626; border-radius: 8px; padding: 14px; border: none; color: white; font-size: 1.1rem; font-weight: bold; cursor: pointer; transition: 0.3s; box-shadow: 0 4px 6px rgba(220, 38, 38, 0.2); }
         .custom-form button:hover { background: #b91c1c; }
         .admin-section button { background: #0f172a; }
@@ -97,7 +104,7 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <h1>•చెన్నయ్య పెయింటర్</h1>
+        <h1>చెన్నయ్య పెయింటర్</h1>
         <p>మీ ఇంటికి రంగుల అందం! జమ్మలమడుగులో అత్యుత్తమ క్వాలిటీ మరియు నమ్మకమైన పెయింటింగ్ సర్వీస్.</p>
         
         <div class="rating-badge">
@@ -135,10 +142,10 @@
         </div>
     </section>
 
-    <!-- Gallery (ఫోటోలు ఇక్కడ కనిపిస్తాయి) -->
+    <!-- Gallery -->
     <section id="gallery" class="gallery">
         <h2>మా పెయింటింగ్ పనులు</h2>
-        <p class="section-desc">మేము పూర్తి చేసిన పనుల ఒరిజినల్ ఫోటోలు (కింద ఉన్న ఫారమ్ ద్వారా మీరు మరిన్ని యాడ్ చేయవచ్చు):</p>
+        <p class="section-desc">మేము పూర్తి చేసిన పనుల ఒరిజినల్ ఫోటోలు (కింద ఉన్న అప్‌లోడ్ ఆప్షన్ ద్వారా మీరు సిస్టమ్ నుండి ఫోటోలు యాడ్ చేయవచ్చు):</p>
         <div class="grid-container" id="galleryGrid">
             
             <!-- ఫోటో 1 -->
@@ -162,7 +169,7 @@
                 <div class="img-container">
                     <img src="https://i.ibb.co/C5V20zPz/sv8TMvPR.png" alt="Painting Work 3">
                 </div>
-                <div class="img-info">మోడరన్ హౌస్ కంప్లీట్ పెయింటింగ్</div>
+                <div class="img-info">모డరన్ హౌస్ కంప్లీట్ పెయింటింగ్</div>
             </div>
 
         </div>
@@ -170,7 +177,7 @@
 
     <!-- జెన్యూన్ కస్టమర్ రివ్యూస్ -->
     <section id="reviews" class="reviews">
-        <h2>కస్టమర్ల అభిప్రాయాలు (Reviews)</h2>
+        <h2>కస్టమర్ల అభిప్రায়ాలు (Reviews)</h2>
         <p class="section-desc">మా పనితనంపై కస్టమర్లు ఇచ్చిన జెన్యూన్ రేటింగ్స్</p>
         <div class="grid-container">
             <div class="review-box">
@@ -180,7 +187,7 @@
             </div>
             <div class="review-box">
                 <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                <p>"పని చాలా నీట్‌గా ఉంది, ఎక్కడా రంగులు కిんだ పడకుండా జాగ్రత్తగా చేశారు. అనుకున్న టైమ్‌కి వర్క్ పూర్తి చేసి ఇచ్చారు. చాలా థాంక్స్."</p>
+                <p>"పని చాలా నీట్‌గా ఉంది, ఎక్కడా రంగులు కింద పడకుండా జాగ్రత్తగా చేశారు. అనుకున్న టైమ్‌కి వర్క్ పూర్తి చేసి ఇచ్చారు. చాలా థాంక్స్."</p>
                 <span class="client-name">- సురేష్ కుమార్ (విలేజ్ కాంట్రాక్ట్)</span>
             </div>
         </div>
@@ -199,18 +206,21 @@
                 <option value="exterior">ఇంటి బయట (Exterior)</option>
                 <option value="texture">డిజైన్ వర్క్ (Texture)</option>
             </select>
-            <button type="submit">విವರాలు సబ్మిట్ చేయండి</button>
+            <button type="submit">వివరాలు సబ్మిట్ చేయండి</button>
         </form>
     </section>
 
-    <!-- NEW: Admin Photo Uploader Section (ఫోటోలు యాడ్ చేసుకునే ఆప్షన్) -->
+    <!-- Admin Section (సిస్టమ్ నుండి నేరుగా ఫోటోలు అప్‌లోడ్ చేసే ఆప్షన్) -->
     <section class="admin-section" id="adminPanel">
-        <h2>새 కొత్త ఫోటోలను ఇక్కడి నుండి యాడ్ చేయండి</h2>
-        <p class="section-desc">మీరు కొత్తగా చేసిన పనుల ImgBB ఇమేజ్ లింక్ మరియు పేరు ఇక్కడ ఇస్తే పైన గ్యాలరీలో యాడ్ అవుతుంది.</p>
-        <form id="photoUploadForm" class="custom-form">
-            <input type="text" id="photoLink" placeholder="ఇమేజ్ డైరెక్ట్ లింక్ పేస్ట్ చేయండి (Eg: https://i.ibb.co/...)" required>
-            <input type="text" id="photoTitle" placeholder="పని యొక్క పేరు (Eg: రాయల్ టెక్స్చర్ డిజైన్)" required>
-            <button type="submit">ఫోటో యాడ్ చేయి 📸</button>
+        <h2>మీ ఫోన్/కంప్యూటర్ నుండి కొత్త ఫోటోలను యాడ్ చేయండి</h2>
+        <p class="section-desc">కింద ఉన్న బటన్ క్లిక్ చేసి మీ గ్యాలరీ నుండి పెయింటింగ్ ఫోటోను సెలెక్ట్ చేసుకోండి.</p>
+        <form id="systemUploadForm" class="custom-form">
+            <div class="file-upload-wrapper">
+                <div class="file-upload-btn" id="uploadLabel"><i class="fas fa-cloud-upload-alt" style="font-size: 24px; display:block; margin-bottom:5px;"></i> సిస్టమ్ నుండి ఫోటోను ఎంచుకోండి</div>
+                <input type="file" id="imageFile" accept="image/*" required>
+            </div>
+            <input type="text" id="systemPhotoTitle" placeholder="పని యొక్క పేరు (ఉదా: మోడరన్ హౌస్ ఎక్స్‌టీరియర్ పెయింటింగ్)" required>
+            <button type="submit">గ్యాలరీలో ఫోటో యాడ్ చేయి 📸</button>
         </form>
     </section>
 
@@ -229,41 +239,59 @@
     </footer>
 
     <script>
-        // కస్టమర్ కాంటాక్ట్ ఫారమ్ సబ్మిషన్
+        // కాంటాక్ట్ ఫారమ్
         document.getElementById('paintForm').addEventListener('submit', function(e) {
             e.preventDefault();
             alert('ధన్యవాదాలు! మీ వివరాలు చెన్నయ్య గారికి అందాయి. త్వరలోనే మిమ్మల్ని సంప్రదిస్తారు.');
             this.reset();
         });
 
-        // కొత్త ఫోటోలను గ్యాలరీలోకి ఆటోమేటిక్‌గా యాడ్ చేసే కోడ్
-        document.getElementById('photoUploadForm').addEventListener('submit', function(e) {
+        // ఫైల్ సెలెక్ట్ చేసినప్పుడు ఫైల్ పేరు చూపించడానికి
+        document.getElementById('imageFile').addEventListener('change', function() {
+            if(this.files && this.files[0]) {
+                document.getElementById('uploadLabel').innerHTML = `<i class="fas fa-check-circle" style="color:#16a34a; font-size: 24px; display:block; margin-bottom:5px;"></i> ${this.files[0].name}`;
+            }
+        });
+
+        // సిస్టమ్ ఫైల్ రీడర్ ద్వారా ఫోటోను లైవ్‌గా లోడ్ చేయడం
+        document.getElementById('systemUploadForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // ఇన్‌పుట్ వాల్యూస్ తీసుకోవడం
-            const link = document.getElementById('photoLink').value;
-            const title = document.getElementById('photoTitle').value;
+            const fileInput = document.getElementById('imageFile');
+            const titleInput = document.getElementById('systemPhotoTitle');
             
-            // కొత్త ఫోటో కార్డ్ డిజైన్ సృష్టించడం
-            const newCard = document.createElement('div');
-            newCard.className = 'img-card';
-            newCard.innerHTML = `
-                <div class="img-container">
-                    <img src="${link}" alt="${title}">
-                </div>
-                <div class="img-info">${title}</div>
-            `;
-            
-            // గ్యాలరీ గ్రిడ్‌లో ఈ కొత్త కార్డ్‌ని యాడ్ చేయడం
-            document.getElementById('galleryGrid').appendChild(newCard);
-            
-            alert('అభినందనలు! మీ కొత్త ఫోటో "మా పనులు" సెక్షన్‌లో విజయవంతంగా యాడ్ చేయబడింది.');
-            
-            // ఫారమ్ క్లియర్ చేయడం
-            this.reset();
-            
-            // గ్యాలరీ సెక్షన్ దగ్గరికి పేజీ స్క్రోల్ అవ్వడం
-            document.getElementById('gallery').scrollIntoView();
+            if (fileInput.files && fileInput.files[0]) {
+                const reader = new FileReader();
+                
+                reader.onload = function(event) {
+                    const imageSrc = event.target.result;
+                    const title = titleInput.value;
+                    
+                    // కొత్త కార్డును సృష్టించడం
+                    const newCard = document.createElement('div');
+                    newCard.className = 'img-card';
+                    newCard.innerHTML = `
+                        <div class="img-container">
+                            <img src="${imageSrc}" alt="${title}">
+                        </div>
+                        <div class="img-info">${title}</div>
+                    `;
+                    
+                    // గ్యాలరీ గ్రిడ్‌లో చేర్చడం
+                    document.getElementById('galleryGrid').appendChild(newCard);
+                    
+                    alert('సక్సెస్! మీ సిస్టమ్ నుండి ఫోటో విజయవంతంగా పేజీలో యాడ్ అయింది.');
+                    
+                    // ఫారమ్ రీసెట్
+                    document.getElementById('systemUploadForm').reset();
+                    document.getElementById('uploadLabel').innerHTML = `<i class="fas fa-cloud-upload-alt" style="font-size: 24px; display:block; margin-bottom:5px;"></i> సిస్టమ్ నుండి ఫోటోను ఎంచుకోండి`;
+                    
+                    // గ్యాలరీ సెక్షన్‌కు స్క్రోల్ చేయడం
+                    document.getElementById('gallery').scrollIntoView();
+                };
+                
+                reader.readAsDataURL(fileInput.files[0]);
+            }
         });
     </script>
 </body>
