@@ -50,19 +50,22 @@ gap:15px;
 }
 
 .logo img{
-width:60px;
-height:60px;
-border-radius:50%;
+width:80px;
+height:80px;
+object-fit:contain;
+border-radius:12px;
 }
 
 .logo h2{
 color:#d62828;
-font-size:24px;
+font-size:30px;
+font-weight:700;
+margin-bottom:5px;
 }
 
 .logo p{
-font-size:13px;
-color:#666;
+font-size:14px;
+color:#555;
 }
 
 nav ul{
