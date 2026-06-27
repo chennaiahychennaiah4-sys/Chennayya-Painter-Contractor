@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://chennaiahychennaiah4-sys.github.io/Chennayya-Painter-Contractor/sitemap.xml
