@@ -46,8 +46,6 @@
         /* Service Cards */
         .card { background: white; padding: 35px 25px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -1px rgba(0,0,0,0.06); width: 320px; transition: 0.3s; border-top: 5px solid #dc2626; }
         .card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); }
-        .card h3 { margin-bottom: 15px; color: #0f172a; font-size: 1.4rem; }
-        .card p { color: #475569; line-height: 1.6; }
         
         /* Gallery Image Cards */
         .img-card { width: 320px; background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); transition: 0.3s; }
@@ -63,29 +61,31 @@
         .client-name { font-weight: bold; margin-top: 12px; color: #0f172a; display: block; }
         .stars { color: #f59e0b; margin-bottom: 8px; font-size: 1.1rem; }
 
-        /* Contact Form */
-        .contact { background-color: #f1f5f9; }
-        #paintForm { max-width: 450px; margin: 0 auto; background: white; padding: 40px; border-radius: 16px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05); display: flex; flex-direction: column; gap: 20px; }
-        #paintForm input, #paintForm select { padding: 14px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 1rem; outline: none; transition: 0.3s; }
-        #paintForm input:focus, #paintForm select:focus { border-color: #dc2626; box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.15); }
-        #paintForm button { background: #dc2626; border-radius: 8px; padding: 14px; border: none; color: white; font-size: 1.1rem; font-weight: bold; cursor: pointer; transition: 0.3s; box-shadow: 0 4px 6px rgba(220, 38, 38, 0.2); }
-        #paintForm button:hover { background: #b91c1c; }
+        /* Contact & Admin Forms */
+        .contact, .admin-section { background-color: #f1f5f9; }
+        .admin-section { background-color: #e2e8f0; border-top: 2px dashed #cbd5e1; }
+        .custom-form { max-width: 450px; margin: 0 auto; background: white; padding: 40px; border-radius: 16px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05); display: flex; flex-direction: column; gap: 20px; }
+        .custom-form input, .custom-form select { padding: 14px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 1rem; outline: none; transition: 0.3s; }
+        .custom-form input:focus, .custom-form select:focus { border-color: #dc2626; box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.15); }
+        .custom-form button { background: #dc2626; border-radius: 8px; padding: 14px; border: none; color: white; font-size: 1.1rem; font-weight: bold; cursor: pointer; transition: 0.3s; box-shadow: 0 4px 6px rgba(220, 38, 38, 0.2); }
+        .custom-form button:hover { background: #b91c1c; }
+        .admin-section button { background: #0f172a; }
+        .admin-section button:hover { background: #1e293b; }
         
-        /* Floating WhatsApp & Call Buttons (Mobile Friendly) */
+        /* Floating WhatsApp & Call Buttons */
         .floating-btn { position: fixed; bottom: 20px; width: 60px; height: 60px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 28px; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3); z-index: 1000; text-decoration: none; transition: 0.3s; color: white; }
         .floating-btn:hover { transform: scale(1.1); }
         .floating-whatsapp { right: 20px; background-color: #25d366; }
         .floating-call { right: 90px; background-color: #2563eb; }
 
         footer { background-color: #0f172a; color: #cbd5e1; text-align: center; padding: 30px 20px; font-size: 1rem; border-top: 1px solid #1e293b; }
-        footer p { margin-bottom: 8px; }
     </style>
 </head>
 <body>
 
     <!-- Header -->
     <header>
-        <div class="logo">🎨 ⁠చెన్నయ్య పెయింటర్</div>
+        <div class="logo">🎨 చెన్నయ్య పెయింటర్</div>
         <nav>
             <a href="#home">హోమ్</a>
             <a href="#services">సర్వీసెస్</a>
@@ -97,10 +97,9 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <h1>చెన్నయ్య పెయింటర్</h1>
+        <h1>•చెన్నయ్య పెయింటర్</h1>
         <p>మీ ఇంటికి రంగుల అందం! జమ్మలమడుగులో అత్యుత్తమ క్వాలిటీ మరియు నమ్మకమైన పెయింటింగ్ సర్వీస్.</p>
         
-        <!-- జెన్యూన్ రేటింగ్ -->
         <div class="rating-badge">
             <span>4.9</span> <i class="fas fa-star"></i> <span>గూగుల్ జెన్యూన్ రేటింగ్ (120+ రివ్యూస్)</span>
         </div>
@@ -111,7 +110,7 @@
         </div>
     </section>
 
-    <!-- లొకేషన్ వివరాలు -->
+    <!-- Notice Bar -->
     <div class="notice-bar">
         <i class="fas fa-map-marker-alt"></i> అడ్రస్: జమ్మలమడుగు | జమ్మలమడుగు చుట్టుపక్కల ఉన్న ఏ గ్రామాల్లోనైనా కాంట్రాక్ట్ తీసుకొని పనులు చేయబడును.
     </div>
@@ -136,32 +135,36 @@
         </div>
     </section>
 
-    <!-- Gallery (మూడు ఫోటోలు పర్ఫెక్ట్‌గా అప్‌డేట్ చేయబడ్డాయి) -->
+    <!-- Gallery (ఫోటోలు ఇక్కడ కనిపిస్తాయి) -->
     <section id="gallery" class="gallery">
         <h2>మా పెయింటింగ్ పనులు</h2>
-        <p class="section-desc">మేము జమ్మలమడుగు పరిసర ప్రాంతాల్లో పూర్తి చేసిన పనుల ఒరిజినల్ ఫోటోలు:</p>
-        <div class="grid-container">
+        <p class="section-desc">మేము పూర్తి చేసిన పనుల ఒరిజినల్ ఫోటోలు (కింద ఉన్న ఫారమ్ ద్వారా మీరు మరిన్ని యాడ్ చేయవచ్చు):</p>
+        <div class="grid-container" id="galleryGrid">
+            
+            <!-- ఫోటో 1 -->
             <div class="img-card">
                 <div class="img-container">
-                    <!-- మొదటి ఫోటో -->
-                    <img src="https://i.ibb.co/6wX2K10Y/vxS6zYWM.png" alt="Chennaiah Painting Work 1">
+                    <img src="https://i.ibb.co/6wX2K10Y/vxS6zYWM.png" alt="Painting Work 1">
                 </div>
                 <div class="img-info">ఇంటీరియర్ బిల్డింగ్ పెయింటింగ్ వర్క్</div>
             </div>
+            
+            <!-- ఫోటో 2 -->
             <div class="img-card">
                 <div class="img-container">
-                    <!-- రెండవ ఫోటో (కొత్తది - అప్‌డేట్ చేయబడింది) -->
-                    <img src="https://i.ibb.co/99mX64gL/tTgbxXf2.png" alt="Chennaiah Painting Work 2">
+                    <img src="https://i.ibb.co/99mX64gL/tTgbxXf2.png" alt="Painting Work 2">
                 </div>
                 <div class="img-info">ఎక్స్‌టీరియర్ వాల్ వర్క్ ఫినిషింగ్</div>
             </div>
+            
+            <!-- ఫోటో 3 -->
             <div class="img-card">
                 <div class="img-container">
-                    <!-- మూడవ ఫోటో (కొత్తది - అప్‌డేట్ చేయబడింది) -->
-                    <img src="https://i.ibb.co/C5V20zPz/sv8TMvPR.png" alt="Chennaiah Painting Work 3">
+                    <img src="https://i.ibb.co/C5V20zPz/sv8TMvPR.png" alt="Painting Work 3">
                 </div>
                 <div class="img-info">మోడరన్ హౌస్ కంప్లీట్ పెయింటింగ్</div>
             </div>
+
         </div>
     </section>
 
@@ -177,7 +180,7 @@
             </div>
             <div class="review-box">
                 <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                <p>"పని చాలా నీట్‌గా ఉంది, ఎక్కడా రంగులు కింద పడకుండా జాగ్రత్తగా చేశారు. అనుకున్న టైమ్‌కి వర్క్ పూర్తి చేసి ఇచ్చారు. చాలా థాంక్స్."</p>
+                <p>"పని చాలా నీట్‌గా ఉంది, ఎక్కడా రంగులు కిんだ పడకుండా జాగ్రత్తగా చేశారు. అనుకున్న టైమ్‌కి వర్క్ పూర్తి చేసి ఇచ్చారు. చాలా థాంక్స్."</p>
                 <span class="client-name">- సురేష్ కుమార్ (విలేజ్ కాంట్రాక్ట్)</span>
             </div>
         </div>
@@ -187,7 +190,7 @@
     <section id="contact" class="contact">
         <h2>మమ్మల్ని సంప్రదించండి</h2>
         <p class="section-desc">ఉచిత కొటేషన్ లేదా మాట్లాడటానికి కింద ఫారమ్ నింపండి</p>
-        <form id="paintForm">
+        <form id="paintForm" class="custom-form">
             <input type="text" placeholder="మీ పేరు" required>
             <input type="tel" placeholder="మీ ఫోన్ నెంబర్" required>
             <select required>
@@ -196,16 +199,25 @@
                 <option value="exterior">ఇంటి బయట (Exterior)</option>
                 <option value="texture">డిజైన్ వర్క్ (Texture)</option>
             </select>
-            <button type="submit">వివరాలు సబ్మిట్ చేయండి</button>
+            <button type="submit">విವರాలు సబ్మిట్ చేయండి</button>
         </form>
     </section>
 
-    <!-- Floating Buttons (కుడివైపు కింద ఉండే ఐకాన్లు) -->
-    <!-- Call సింబల్ -->
+    <!-- NEW: Admin Photo Uploader Section (ఫోటోలు యాడ్ చేసుకునే ఆప్షన్) -->
+    <section class="admin-section" id="adminPanel">
+        <h2>새 కొత్త ఫోటోలను ఇక్కడి నుండి యాడ్ చేయండి</h2>
+        <p class="section-desc">మీరు కొత్తగా చేసిన పనుల ImgBB ఇమేజ్ లింక్ మరియు పేరు ఇక్కడ ఇస్తే పైన గ్యాలరీలో యాడ్ అవుతుంది.</p>
+        <form id="photoUploadForm" class="custom-form">
+            <input type="text" id="photoLink" placeholder="ఇమేజ్ డైరెక్ట్ లింక్ పేస్ట్ చేయండి (Eg: https://i.ibb.co/...)" required>
+            <input type="text" id="photoTitle" placeholder="పని యొక్క పేరు (Eg: రాయల్ టెక్స్చర్ డిజైన్)" required>
+            <button type="submit">ఫోటో యాడ్ చేయి 📸</button>
+        </form>
+    </section>
+
+    <!-- Floating Buttons -->
     <a href="tel:+919550455757" class="floating-btn floating-call" title="కాల్ చేయండి">
         <i class="fas fa-phone-alt"></i>
     </a>
-    <!-- WhatsApp సింబల్ -->
     <a href="https://wa.me/919550455757?text=Hello%20Chennaiah%20గారు,%20నాకు%20పెయింటింగ్%20వర్క్%20గురించి%20వివరాలు%20కావాలి." class="floating-btn floating-whatsapp" target="_blank" title="వాట్సాప్ చేయండి">
         <i class="fab fa-whatsapp"></i>
     </a>
@@ -217,10 +229,41 @@
     </footer>
 
     <script>
+        // కస్టమర్ కాంటాక్ట్ ఫారమ్ సబ్మిషన్
         document.getElementById('paintForm').addEventListener('submit', function(e) {
             e.preventDefault();
             alert('ధన్యవాదాలు! మీ వివరాలు చెన్నయ్య గారికి అందాయి. త్వరలోనే మిమ్మల్ని సంప్రదిస్తారు.');
             this.reset();
+        });
+
+        // కొత్త ఫోటోలను గ్యాలరీలోకి ఆటోమేటిక్‌గా యాడ్ చేసే కోడ్
+        document.getElementById('photoUploadForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // ఇన్‌పుట్ వాల్యూస్ తీసుకోవడం
+            const link = document.getElementById('photoLink').value;
+            const title = document.getElementById('photoTitle').value;
+            
+            // కొత్త ఫోటో కార్డ్ డిజైన్ సృష్టించడం
+            const newCard = document.createElement('div');
+            newCard.className = 'img-card';
+            newCard.innerHTML = `
+                <div class="img-container">
+                    <img src="${link}" alt="${title}">
+                </div>
+                <div class="img-info">${title}</div>
+            `;
+            
+            // గ్యాలరీ గ్రిడ్‌లో ఈ కొత్త కార్డ్‌ని యాడ్ చేయడం
+            document.getElementById('galleryGrid').appendChild(newCard);
+            
+            alert('అభినందనలు! మీ కొత్త ఫోటో "మా పనులు" సెక్షన్‌లో విజయవంతంగా యాడ్ చేయబడింది.');
+            
+            // ఫారమ్ క్లియర్ చేయడం
+            this.reset();
+            
+            // గ్యాలరీ సెక్షన్ దగ్గరికి పేజీ స్క్రోల్ అవ్వడం
+            document.getElementById('gallery').scrollIntoView();
         });
     </script>
 </body>
