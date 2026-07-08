@@ -556,3 +556,15 @@ font-size:28px;
     font-size:14px;
     color:#555;
 }
+.before-after-box{
+max-width:900px;
+margin:40px auto;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 10px 30px rgba(0,0,0,.2);
+}
+
+.before-after-box img{
+width:100%;
+display:block;
+}
